@@ -1,8 +1,12 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Button from "./Button";
 import { TiLocationArrow } from "react-icons/ti";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
@@ -10,7 +14,7 @@ const Hero = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedVideos, setLoadedVideos] = useState(0);
 
-  const totalVideos = 3;
+  const totalVideos = 4;
   const nextVideoRef = useRef(null);
 
   const handleVideoLoad = () => {
@@ -24,6 +28,12 @@ const Hero = () => {
 
     setCurrentIndex(upcomingVIdeoIndex);
   };
+
+  useEffect(() => {
+    if (loadedVideos === totalVideos - 1) {
+      setIsLoading(false);
+    }
+  }, [loadedVideos]);
 
   useGSAP(
     () => {
@@ -74,6 +84,15 @@ const Hero = () => {
 
   return (
     <div className="relative h-dvh w-screen overflox-x-hidden">
+      {isLoading && (
+        <div className="flex-center absolute z-[100] h-dvh w-screen overflow-hidden bg-violet-50">
+          <div className="three-body">
+            <div className="three-body__dot "></div>
+            <div className="three-body__dot"></div>
+            <div className="three-body__dot"></div>
+          </div>
+        </div>
+      )}
       <div
         id="video-frame"
         className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75"
@@ -124,8 +143,10 @@ const Hero = () => {
             <h1 className="special-font hero-heading text-blue-100">
               <b>a</b>etern<b>a</b>
             </h1>
-            <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
-              I dont know yet <br /> Unleash the beast
+            <p className="mb-5 max-w-64 xl:max-w-[30rem] font-robert-regular text-blue-100">
+              Dive into dynamic visuals, interactive experiences, and the
+              endless potential of design brought to life with precision and
+              passion. <br />
             </p>
             <Button
               id="watch-trailer"
