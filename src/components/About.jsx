@@ -37,7 +37,7 @@ const About = () => {
         />
 
         <div className="about-subtext">
-          <p>The Game of Games begins-your life, now an epic MMORPG</p>
+          <p>The Game of Games begins - your life, now an epic MMORPG</p>
           <p>Aeterna unites every player from countless games and platforms</p>
         </div>
       </div>
