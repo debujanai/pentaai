@@ -69,7 +69,6 @@ const NavBar = () => {
     >
       <header className="absolute top-1/2 w-full -translate-y-1/2">
         <nav className="flex size-full items-center justify-between p-4">
-          {/* Logo and Product button */}
           <div className="flex items-center gap-7">
             <img src="/img/logo.png" alt="logo" className="w-10" />
 
@@ -83,17 +82,23 @@ const NavBar = () => {
 
           {/* Navigation Links and Audio Button */}
           <div className="flex h-full items-center">
-            <div className="hidden md:block">
-              {navItems.map((item, index) => (
-                <a
-                  key={index}
-                  href={`#${item.toLowerCase()}`}
-                  className="nav-hover-btn"
-                >
-                  {item}
-                </a>
-              ))}
-            </div>
+            {navItems.map((item, index) => (
+              <a
+                key={index}
+                href={
+                  item.toLowerCase() === "contact"
+                    ? "https://www.semper.blue/"
+                    : `#${item.toLowerCase()}`
+                }
+                className="nav-hover-btn flex items-center"
+                target={item.toLowerCase() === "contact" ? "_blank" : "_self"}
+              >
+                {item}
+                {item.toLowerCase() === "contact" && (
+                  <TiLocationArrow className="ml-2" />
+                )}
+              </a>
+            ))}
 
             <button
               onClick={toggleAudioIndicator}
