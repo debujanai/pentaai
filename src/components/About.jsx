@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
+import AnimatedTitle from "./AnimatedTitle";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,10 +31,11 @@ const About = () => {
         <h2 className="font-general text-sm uppercase md:text-[10px]">
           Welcome to Aeterna
         </h2>
-        <div className="mt-5 text-center text-4xl uppercase leading-[0.8] md:text-[6rem]">
-          Disc<b>o</b>ver the w<b>o</b>rld&apos;s larg<b>e</b>st shar<b>e</b>d
-          adv<b>e</b>nture
-        </div>
+        <AnimatedTitle
+          title=" Disc<b>o</b>ver the w<b>o</b>rld's larg<b>e</b>st shar<b>e</b>d adv<b>e</b>nture"
+          containerClass="mt-5 !text-black text-center2"
+        />
+
         <div className="about-subtext">
           <p>The Game of Games begins-your life, now an epic MMORPG</p>
           <p>Aeterna unites every player from countless games and platforms</p>
