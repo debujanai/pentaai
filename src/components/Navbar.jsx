@@ -74,9 +74,9 @@ const NavBar = () => {
 
             <Button
               id="product-button"
-              title="Products"
+              title="Shop"
               rightIcon={<TiLocationArrow />}
-              containerClass="!bg-violet-500 text-white flex-center gap-1 hover:text-violet-500 hover:!bg-white  transition-all duration-300 ease-in-out"
+              containerClass="!bg-violet-500  text-white flex-center gap-1 hover:text-violet-500 hover:!bg-white  transition-all duration-300 ease-in-out"
             />
           </div>
 
@@ -91,7 +91,7 @@ const NavBar = () => {
                     : `#${item.toLowerCase()}`
                 }
                 className={clsx("nav-hover-btn flex items-center", {
-                  "hidden sm:block md:block lg:block":
+                  "hidden md:block lg:block":
                     item === "Vault" || item === "Prologue", // hide on sm and md, show on lg
                 })}
                 target={item.toLowerCase() === "contact" ? "_blank" : "_self"}
