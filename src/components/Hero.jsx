@@ -151,7 +151,7 @@ const Hero = () => {
             <Button
               id="watch-trailer"
               title="Explore Semper"
-              leftIcon={<TiLocationArrow />}
+              rightIcon={<TiLocationArrow />}
               containerClass="!bg-violet-500 text-white flex-center gap-1 hover:text-violet-500 hover:!bg-white  transition-all duration-300 ease-in-out
  "
             />
