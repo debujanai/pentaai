@@ -90,7 +90,10 @@ const NavBar = () => {
                     ? "https://www.semper.blue/"
                     : `#${item.toLowerCase()}`
                 }
-                className="nav-hover-btn flex items-center"
+                className={clsx("nav-hover-btn flex items-center", {
+                  "hidden sm:block md:block lg:block":
+                    item === "Vault" || item === "Prologue", // hide on sm and md, show on lg
+                })}
                 target={item.toLowerCase() === "contact" ? "_blank" : "_self"}
               >
                 {item}
@@ -102,7 +105,7 @@ const NavBar = () => {
 
             <button
               onClick={toggleAudioIndicator}
-              className="ml-10 flex items-center space-x-0.5"
+              className="ml-10 flex items-center space-x-0.5 hidden sm:block md:block lg:flex"
             >
               <audio
                 ref={audioElementRef}
