@@ -141,7 +141,7 @@ const Hero = () => {
         <div className="absolute left-0 top-0 z-40 size-full">
           <div className="mt-24 px-5 sm:px-10">
             <h1 className="special-font hero-heading text-blue-100">
-              <b>a</b>etern<b>a</b>
+              <b>a</b>et<b>e</b>rn<b>a</b>
             </h1>
             <p className="mb-5 max-w-64 xl:max-w-[30rem] font-robert-regular text-blue-100">
               Dive into dynamic visuals, interactive experiences, and the
