@@ -1,4 +1,4 @@
-import { FaGithub, FaGlobe, FaYoutube, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaGlobe, FaLinkedin } from "react-icons/fa";
 
 const socialLinks = [
   { href: "https://github.com/LukaTizic", icon: <FaGithub /> },
