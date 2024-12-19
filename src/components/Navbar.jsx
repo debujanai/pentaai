@@ -81,7 +81,7 @@ const NavBar = () => {
           </div>
 
           {/* Navigation Links and Audio Button */}
-          <div className="flex h-full items-center">
+          <div className="flex h-full items-center ">
             {navItems.map((item, index) => (
               <a
                 key={index}
@@ -92,7 +92,10 @@ const NavBar = () => {
                 }
                 className={clsx("nav-hover-btn flex items-center", {
                   "hidden md:block lg:block":
-                    item === "Vault" || item === "Prologue", // hide on sm and md, show on lg
+                    item === "Vault" ||
+                    item === "Prologue" ||
+                    item === "Nexus" ||
+                    item === "About", // hide on sm and md, show on lg
                 })}
                 target={item.toLowerCase() === "contact" ? "_blank" : "_self"}
               >
@@ -105,7 +108,7 @@ const NavBar = () => {
 
             <button
               onClick={toggleAudioIndicator}
-              className="ml-10  items-center space-x-0.5 hidden sm:block md:block lg:flex"
+              className="ml-10 items-center space-x-0.5 hidden lg:flex"
             >
               <audio
                 ref={audioElementRef}
