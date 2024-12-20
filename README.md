@@ -1,2 +1,3 @@
-This is a ` 👟 Aeterna ✔️ ` project with [`Demo-link`](https://aeterna-wine.vercel.app/). 
+This is a `👟 Aeterna ✔️` project with [`Demo-link`](https://aeterna-wine.vercel.app/).
 
+![Alt text](./img/story-section.png)
