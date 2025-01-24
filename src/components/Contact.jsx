@@ -41,7 +41,15 @@ const Tokenomics = () => {
             className="special-font !md:text-[6.2rem] w-full font-zentry !text-5xl !font-black !leading-[.9]"
           />
 
-          <div className="mt-8 grid grid-cols-2 gap-8 md:grid-cols-4">
+          <div className="mt-8 grid grid-cols-2 gap-8 md:grid-cols-3">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-[#264653]">10M</h3>
+              <p className="text-sm">Total Supply</p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-[#264653]">5%</h3>
+              <p className="text-sm">Tax</p>
+            </div>
             <div className="text-center">
               <h3 className="text-2xl font-bold text-[#264653]">40%</h3>
               <p className="text-sm">Community Rewards</p>
