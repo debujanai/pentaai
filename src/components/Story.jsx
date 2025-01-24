@@ -1,114 +1,109 @@
 import AnimatedTitle from "./AnimatedTitle";
 import gsap from "gsap";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import Button from "./Button";
+
 const Story = () => {
-  const frameRef = useRef(null);
+  const leftCurtainRef = useRef(null);
+  const rightCurtainRef = useRef(null);
+  const sectionRef = useRef(null);
 
-  const handleMouseMove = (e) => {
-    const { clientX, clientY } = e;
-    const element = frameRef.current;
+  useEffect(() => {
+    const leftCurtain = leftCurtainRef.current;
+    const rightCurtain = rightCurtainRef.current;
+    const section = sectionRef.current;
 
-    if (!element) return;
+    if (!leftCurtain || !rightCurtain || !section) return;
 
-    const rect = element.getBoundingClientRect();
-    const xPos = clientX - rect.left;
-    const yPos = clientY - rect.top;
-
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-
-    const rotateX = ((yPos - centerY) / centerY) * -10;
-    const rotateY = ((xPos - centerX) / centerX) * 10;
-
-    gsap.to(element, {
-      duration: 0.3,
-      rotateX,
-      rotateY,
-      transformPerspective: 500,
-      ease: "power1.inOut",
+    // Set initial state
+    gsap.set([leftCurtain, rightCurtain], {
+      opacity: 1
     });
-  };
+    gsap.set(leftCurtain, { x: "0%" });
+    gsap.set(rightCurtain, { x: "0%" });
 
-  const handleMouseLeave = () => {
-    const element = frameRef.current;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Opening animation when section comes into view
+            gsap.to(leftCurtain, {
+              x: "-100%",
+              duration: 1.5,
+              ease: "power2.inOut",
+              delay: 0.5
+            });
+            gsap.to(rightCurtain, {
+              x: "100%",
+              duration: 1.5,
+              ease: "power2.inOut",
+              delay: 0.5
+            });
+            // Disconnect observer after animation starts
+            observer.disconnect();
+          }
+        });
+      },
+      {
+        threshold: 0.3 // Trigger when 30% of the section is visible
+      }
+    );
 
-    if (element) {
-      gsap.to(element, {
-        duration: 0.3,
-        rotateX: 0,
-        rotateY: 0,
-        ease: "power1.inOut",
-      });
-    }
-  };
+    observer.observe(section);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
-    <div id="story" className="min-h-dvh w-screen bg-black text-blue-50">
-      <div className="flex size-full flex-col items-center py-10 pb-24">
+    <div id="dapp" ref={sectionRef} className="min-h-dvh w-screen bg-black text-blue-50">
+      <div className="flex size-full flex-col items-center py-10">
         <p className="font-general text-small uppercase md:text-[10px]">
-          the multiversal ip world
+          revolutionizing defi with autonomous intelligence
         </p>
-        <div className="relative size-full">
-          <AnimatedTitle
-            title="T<b>h</b>e st<b>o</b>ry <b>o</b>f <br /><b>a</b> hi<b>dd</b>en re<b>a</b>lm"
-            sectionId="#story"
-            containerClass="mt-5 pointer-events-none mix-blend-difference relative z-10"
+        <AnimatedTitle
+          title="T<b>h</b>e Fu<b>tu</b>re <b>o</b>f <br />De<b>F</b>i <b>I</b>s Here"
+          sectionId="#story"
+          containerClass="mt-5 pointer-events-none mix-blend-difference relative z-10"
+        />
+        <div className="relative w-full max-w-[1200px] aspect-[2/1] overflow-hidden mt-8 mx-auto px-4">
+          <video
+            src="/videos/demo.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
           />
-          <div className="story-img-container">
-            <div className="story-img-mask">
-              <div className="story-img-content">
-                <img
-                  ref={frameRef}
-                  onMouseMove={handleMouseMove}
-                  onMouseLeave={handleMouseLeave}
-                  onMouseUp={handleMouseLeave}
-                  onMouseEnter={handleMouseLeave}
-                  src="/img/entrance.webp"
-                  alt="entrance.webp"
-                  className="object-contain"
-                />
-              </div>
-            </div>
-            <svg
-              className="invisible absolute size-0"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <defs>
-                <filter id="flt_tag">
-                  <feGaussianBlur
-                    in="SourceGraphic"
-                    stdDeviation="8"
-                    result="blur"
-                  />
-                  <feColorMatrix
-                    in="blur"
-                    mode="matrix"
-                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
-                    result="flt_tag"
-                  />
-                  <feComposite
-                    in="SourceGraphic"
-                    in2="flt_tag"
-                    operator="atop"
-                  />
-                </filter>
-              </defs>
-            </svg>
-          </div>
+          <div 
+            ref={leftCurtainRef}
+            className="absolute top-0 left-0 w-1/2 h-full bg-black"
+            style={{ willChange: 'transform' }}
+          />
+          <div 
+            ref={rightCurtainRef}
+            className="absolute top-0 right-0 w-1/2 h-full bg-black"
+            style={{ willChange: 'transform' }}
+          />
         </div>
-        <div className="-mt-80 flex w-full justify-center md:-mt-54 md:me-44 md:justify-end">
-          <div className="flex h-full w-fit flex-col items-center md:items-start">
-            <p className="mt-3 max-w-sm text-center font-circular-web text-violet-50 md:text-start">
-              Where realms converge, lies Aeterna and the boundless pillar.
-              Sidcover it&apos;s secrets and shape your fate amidst infinite
-              opportunities.
+        <div className="mt-20 flex w-full justify-center">
+          <div className="flex h-full w-fit flex-col items-center">
+            <p className="font-general text-center text-[18px] leading-[1.8] text-blue-50/80 md:text-center">
+              Step into a revolutionary DeFi ecosystem where autonomous systems work in perfect harmony. <br />
+              Our platform combines advanced trading algorithms, smart contract automation, and <br />
+              real-time market analysis to deliver an unparalleled financial experience. From automated <br />
+              portfolio management to cross-chain operations, our intelligent systems handle complex <br />
+              DeFi operations while you maintain full control of your assets. Experience the next <br />
+              generation of decentralized finance, where efficiency meets security.
             </p>
-            <Button
-              id="realm-btn"
-              title="Discover prologue"
-              containerClass="mt-5 text-violet-50 bg-violet-500 hover:text-violet-500 hover:bg-white transition-all duration-300 ease-in-out"
-            />
+            <div className="mt-10">
+              <Button
+                id="realm-btn"
+                title="Enter The Future"
+                containerClass="mt-5 text-white bg-[#264653] hover:text-[#264653] hover:bg-white transition-all duration-300 ease-in-out"
+              />
+            </div>
           </div>
         </div>
       </div>

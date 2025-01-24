@@ -29,22 +29,23 @@ const About = () => {
     <div id="about" className="min-h-screen w-screen">
       <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
         <h2 className="font-general text-sm uppercase md:text-[10px]">
-          Welcome to Aeterna
+          Welcome to PENTA AI
         </h2>
         <AnimatedTitle
-          title=" Disc<b>o</b>ver the w<b>o</b>rld's larg<b>e</b>st shar<b>e</b>d adv<b>e</b>nture"
+          title=" Unleash the power of AI agents for a smarter future"
           containerClass="mt-5 !text-black text-center2"
         />
 
         <div className="about-subtext">
-          <p>The Game of Games begins - your life, now an epic MMORPG</p>
-          <p>Aeterna unites every player from countless games and platforms</p>
+          <p>Transforming the way we interact with technology through intelligent agents. PENTA AI connects users with advanced AI solutions across various platforms.</p>
+          <p>Our advanced AI agents leverage state-of-the-art technology to automate complex tasks,enhance decision-making processes, and create seamless user experiences in the DeFi space.</p>
+      
         </div>
       </div>
       <div className="h-dvh w-screen " id="clip">
         <div className="mask-clip-path about-image">
           <img
-            src="img/about.webp"
+            src="img/cc (1).png"
             alt="about"
             className="absolute left-0 top-0 size-full object-cover"
           />

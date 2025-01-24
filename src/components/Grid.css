@@ -1,0 +1,402 @@
+/* Add font imports at the top of the file */
+@import url('https://use.typekit.net/uha1xkx.css'); /* TypeKit for tt-autonomous */
+@import url('https://api.fontshare.com/v2/css?f[]=iki-mono@400,300,500,600,700&display=swap'); /* Iki Mono from Fontshare */
+
+/* Remove global styles and scope them to the grid component */
+.grid-component *,
+.grid-component *::after,
+.grid-component *::before {
+  box-sizing: border-box;
+}
+
+/* Scope variables to grid component */
+.grid-component {
+  --color-text: #fff;
+  --color-text-alt: #8bff85;
+  --color-text-grid: #fff;
+  --color-bg: #000;
+  --color-link: #54ad8a;
+  --color-link-hover: #a054fd;
+  --cut: 20px;
+  font-size: 16px;
+  /* Update font-family to include fallbacks */
+  font-family: "Iki Mono", "Courier New", monospace;
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Remove global body styles and scope them */
+.grid-component {
+  color: var(--color-text);
+  background: black;
+  background-size: cover;
+  font-family: "iki-mono-variable", sans-serif;
+  font-variation-settings: "wdth" 80, "wght" 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Update loading selectors */
+.grid-component.js .loading::before,
+.grid-component.js .loading::after {
+  content: '';
+  position: fixed;
+  z-index: 1000;
+}
+
+.grid-component.js .loading::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-bg);
+}
+
+.grid-component.js .loading::after {
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin: -30px 0 0 -30px;
+  border-radius: 50%;
+  opacity: 0.4;
+  background: var(--color-link);
+  animation: loaderAnim 0.7s linear infinite alternate forwards;
+}
+
+@keyframes loaderAnim {
+  to {
+    opacity: 1;
+    transform: scale3d(0.5,0.5,1);
+  }
+}
+
+/* Rest of the CSS remains the same but prepend .grid-component to each selector */
+.grid-component .grid {
+  display: grid;
+  position: relative;
+  width: min-content;
+  margin: 0 0 30vh auto;
+  padding: 13vw 10vh 3vh 3vh;
+  grid-template-columns: 300px;
+  grid-auto-rows: 300px;
+  gap: 1rem;
+  z-index: 200;
+  color: var(--color-text-grid);
+}
+
+.grid-component .grid__title {
+  text-transform: uppercase;
+  font-size: 6.75vw;
+  line-height: 0.8;
+  opacity: 0.4;
+  font-family: "Zentry";
+  font-weight: 200;
+  line-height: 0.8;
+  background-color: #fff;
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  margin: clamp(2rem, 5vw, 8rem) clamp(2rem, 5vw, 9rem);
+}
+
+.grid-component .card {
+  aspect-ratio: 1;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  gap: 0.5rem;
+  padding: 0.5rem;
+  grid-template-areas: 'box-a box-b' 'box-c box-d';
+  cursor: pointer;
+}
+
+.grid-component .card__img {
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  will-change: filter, transform;
+}
+
+[data-effect="hover-2"] .grid-component .card__img {
+  transform: scale3d(1.3,1.3,1.3);
+}
+
+[data-effect="hover-3"] .grid-component .card__img {
+  transform: scale3d(1.2,1.2,1.2);
+}
+
+.grid-component .card__box {
+  opacity: 0;
+  z-index: 2;
+  padding: 1rem;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  will-change: transform, opacity;
+}
+
+.grid-component .card:hover .card__box {
+  opacity: 1;
+}
+
+.grid-component .card__box--a {
+  grid-area: box-a;
+}
+
+.grid-component .card__box--b {
+  grid-area: box-b;
+}
+
+.grid-component .card__box--c {
+  grid-area: box-c;
+}
+
+.grid-component .card__box--d {
+  grid-area: box-d;
+}
+
+.grid-component .card__box--b,
+.grid-component .card__box--d {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.grid-component .card__box--a,
+.grid-component .card__box--d {
+  clip-path: polygon(0 0,calc(100% - var(--cut)) 0,100% var(--cut),100% 100%,var(--cut) 100%,0 calc(100% - var(--cut)));
+}
+
+.grid-component .card__box--b,
+.grid-component .card__box--c {
+  clip-path: polygon(0 var(--cut),var(--cut) 0,100% 0,100% calc(100% - var(--cut)),calc(100% - var(--cut)) 100%,0 100%);
+}
+
+.grid-component .card__box-number {
+  font-size: clamp(2rem, 10vw, 3.5rem);
+  font-family: "tt-autonomous", "Arial", sans-serif;
+  font-weight: 200;
+  line-height: 0.8;
+  grid-area: number;
+}
+
+.grid-component .card__box--alt {
+  color: var(--color-text-alt);
+}
+
+.grid-component .card__box-tags,
+.grid-component .card__box-category {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: auto;
+}
+
+.grid-component .card__box-tags {
+  grid-area: tags;
+  font-size: 0.65rem;
+}
+
+.grid-component .card__box-category {
+  grid-area: category;
+}
+
+.grid-component .card__box > span {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 53em) {
+  .grid-component .grid {
+    grid-template-columns: repeat(2,300px);
+  }
+  .grid-component .grid__title {
+    position: absolute;
+    top: 0;
+    left: -13vw;
+  }
+} 
+
+/* Add these new styles */
+.roadmap-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 6.75vw;
+  line-height: 0.8;
+  opacity: 1;
+  font-family: "Zentry";
+  font-weight: 200;
+  line-height: 0.8;
+  background-color: #fff;
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+/* Add hover-4 effect styles */
+.grid[data-effect="hover-4"] .card:hover .card__box--c {
+  transform: translate3d(0, -100%, 0) rotate(5deg);
+}
+
+.grid[data-effect="hover-4"] .card:hover .card__box--d {
+  transform: translate3d(0, 100%, 0) rotate(-5deg);
+} 
+
+.roadmap-title,
+.grid__title {
+  font-family: "Zentry";
+  font-feature-settings: "ss01" on;
+}
+
+.roadmap-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.grid__title {
+  margin-bottom: 1.5rem;
+} 
+
+.grid-component .quarter-description {
+  position: absolute;
+  left: -30vw;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: right;
+  z-index: 100;
+}
+
+.grid-component .quarter-description p {
+  font-family: "tt-autonomous", "Arial", sans-serif;
+  font-size: 1.2rem;
+  color: var(--color-text);
+  margin: 1.5rem 0;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.grid-component .quarter-description p:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 53em) {
+  .grid-component .quarter-description {
+    position: static;
+    left: auto;
+    top: auto;
+    transform: none;
+    text-align: center;
+    margin: 2rem auto;
+    width: 100%;
+    display: block;
+  }
+} 
+
+@media screen and (max-width: 768px) {
+  .quarter-description {
+    order: 2;  /* Move after the grid__title */
+    width: 100%;  /* Full width on mobile */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .grid__title {
+    order: 1;  /* Ensure title comes first */
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid-component .card {
+    order: 3;
+    width: 90vw;
+    max-width: 600px;
+    aspect-ratio: 1;
+    margin: 1rem auto;
+  }
+
+  .grid-component .grid {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid-component .card__box {
+    padding: 2rem;
+    font-size: 1.4em;
+  }
+
+  .grid-component .card__box-number {
+    font-size: clamp(3rem, 15vw, 5rem);
+  }
+
+  .grid-component .card__box-tags,
+  .grid-component .card__box-category {
+    font-size: 1.2rem;
+  }
+} 
+
+.grid-component .grid-container {
+  position: relative;
+  margin-bottom: 30vh;
+}
+
+@media screen and (max-width: 768px) {
+  .grid-component .grid-container {
+    margin-bottom: 15vh;
+  }
+
+  .grid-component .grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+
+  .grid-component .grid__title {
+    position: static;
+    order: 1;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .grid-component .quarter-description {
+    position: static;
+    order: 2;
+    transform: none;
+    text-align: center;
+    margin: 2rem 0;
+    width: 100%;
+  }
+
+  .grid-component .card {
+    order: 3;
+    width: 100%;
+    max-width: 300px;
+  }
+} 

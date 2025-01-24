@@ -1,22 +1,27 @@
 {
-  "name": "aeterna",
+  "name": "Penta AI",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
+    "@studio-freight/lenis": "^1.0.42",
     "clsx": "^2.1.1",
     "gsap": "^3.12.5",
+    "imagesloaded": "^5.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.4.0",
-    "react-use": "^17.6.0"
+    "react-type-animation": "^3.2.0",
+    "react-use": "^17.6.0",
+    "splitting": "^1.1.0",
+    "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
