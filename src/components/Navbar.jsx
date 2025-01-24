@@ -7,7 +7,6 @@ import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
 import Button from "./lib/Button";
 import { TiLocationArrow } from "react-icons/ti";
-import { cn } from "./lib/utils";
 import { RiMenu3Line } from "react-icons/ri";
 import { IoClose } from "react-icons/io5";
 import { useWindowScroll } from "react-use";
