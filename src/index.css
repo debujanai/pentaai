@@ -4,10 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+html, body {
   margin: 0;
   padding: 0;
   width: 100%;
+  max-width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
   background-color: #B6C6D9;
@@ -15,13 +16,30 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
+/* Mobile viewport fixes */
+@media screen and (max-width: 768px) {
+  html, body {
+    width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  #root {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
+
 /* Chrome mobile specific fixes */
 @supports (-webkit-touch-callout: none) {
-  body {
+  html, body {
     min-height: -webkit-fill-available;
+    width: 100vw;
   }
   .app-wrapper {
     min-height: -webkit-fill-available;
+    width: 100vw;
+    overflow-x: hidden;
   }
 }
 

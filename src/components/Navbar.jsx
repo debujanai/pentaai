@@ -17,11 +17,9 @@ if (typeof window !== "undefined") {
 const navItems = [
   {
     label: "About",
-    icon: TiLocationArrow,
   },
   {
     label: "Agents",
-    icon: TiLocationArrow,
   },
   {
     label: "DAPP",
@@ -372,7 +370,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button 
             onClick={toggleMobileMenu}
-            className="relative z-[60] text-white md:hidden"
+            className="relative z-[9999] text-white md:hidden"
           >
             {isMobileMenuOpen ? (
               <IoClose className="h-6 w-6" />
@@ -384,7 +382,7 @@ const Navbar = () => {
           {/* Mobile Menu Panel */}
           <div
             ref={mobileMenuRef}
-            className="fixed inset-0 top-0 z-[55] min-h-screen w-full bg-black md:hidden"
+            className="fixed inset-0 top-0 z-[9998] min-h-screen w-full bg-black md:hidden"
             style={{ 
               height: '100vh',
               perspective: '1000px'

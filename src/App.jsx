@@ -19,6 +19,9 @@ const styles = `
     background-color: black;
     min-height: 100vh;
     transition: background-color 0.5s ease-in-out;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
   }
 
   .app-wrapper.main-background {
@@ -28,9 +31,16 @@ const styles = `
   body {
     margin: 0;
     padding: 0;
-    width: 100dvw;
+    width: 100%;
     overflow-x: hidden;
     font-family: "General Sans", sans-serif;
+    position: relative;
+  }
+
+  .app-content {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
   }
 `
 

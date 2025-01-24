@@ -257,7 +257,7 @@ const PixelEffect = () => {
               </CardItem>
             </div>
             <div className="flex justify-between items-center mt-4 md:mt-8">
-              <CardItem
+              {/* <CardItem
                 translateZ={20}
                 className="text-lg md:text-xl font-semibold dark:text-white zentry"
               >
@@ -269,7 +269,7 @@ const PixelEffect = () => {
                 className="px-4 md:px-6 py-2 md:py-3 rounded-xl bg-white/10 text-white text-sm md:text-base font-bold hover:bg-white/20 border border-white/20 zentry"
               >
                 Join Waitlist
-              </CardItem>
+              </CardItem> */}
             </div>
           </CardBody>
         </CardContainer>
