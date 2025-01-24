@@ -145,7 +145,7 @@ const Features = () => (
             isComingSoon
           />
         </BentoTilt>
-        <BentoTilt className="bento-tilt_2">
+        <BentoTilt className="bento-tilt_1 row-span-4 ms-32 md:col-span-2 md:ms-0">
           <BentoCard
             src="img/r1.png"
             title={<>Aetheris</>}
@@ -154,15 +154,7 @@ const Features = () => (
           />
         </BentoTilt>
 
-        <BentoTilt className="bento-tilt_2">
-          <div className="flex size-full flex-col justify-between bg-[#264653] p-5">
-            <h1 className="bento-title special-font max-w-64 text-white">
-              Ignite the <b>Future</b> of <b>DeFi</b>
-            </h1>
-
-            <TiLocationArrow className="m-5 scale-[5] self-end text-white" />
-          </div>
-        </BentoTilt>
+   
 
        
       </div>

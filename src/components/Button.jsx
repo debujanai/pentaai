@@ -1,7 +1,7 @@
 const Button = ({ title, id, rightIcon, leftIcon, containerClass }) => {
   return (
     <a
-      href="https://www.semper.blue/"
+      href="https://www.pentaai.io"
       target="_blank"
       rel="noopener noreferrer"
       id={id}

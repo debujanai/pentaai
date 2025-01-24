@@ -107,7 +107,7 @@ const Hero = ({ startAnimation }) => {
         top-[35vh] md:top-[0vh]"
       />
       <h1 ref={bottomTextRef} className="special-font hero-heading absolute bottom-5 right-5 text-white">
-        MACHINE
+        PIONEER
       </h1>
     </div>
   )

@@ -69,7 +69,7 @@ const Story = () => {
         />
         <div className="relative w-full max-w-[1200px] aspect-[2/1] overflow-hidden mt-8 mx-auto px-4">
           <video
-            src="/videos/demo.mp4"
+            src="/videos/demoo.mp4"
             autoPlay
             loop
             muted
