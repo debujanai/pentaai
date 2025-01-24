@@ -1,7 +1,7 @@
 import { ReactNode, ButtonHTMLAttributes, forwardRef } from "react";
 import { cn } from "./utils";
 
-export const Button = forwardRef(({ 
+export const NavButton = forwardRef(({ 
   className, 
   leftIcon, 
   rightIcon, 
@@ -38,4 +38,4 @@ export const Button = forwardRef(({
 
 Button.displayName = "Button";
 
-export default Button;
+export default NavButton;

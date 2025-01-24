@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
-import Button from "./lib/Button";
+import Button from "./lib/NavButton";
 import { TiLocationArrow } from "react-icons/ti";
 import { RiMenu3Line } from "react-icons/ri";
 import { IoClose } from "react-icons/io5";
