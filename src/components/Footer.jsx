@@ -3,7 +3,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { LiaTelegramPlane } from "react-icons/lia";
 
 const socialLinks = [
-  { href: "https://github.com/LukaTizic", icon: <FaGithub /> },
+  { href: "https://gitbook.com/pentaai", icon: <FaGithub /> },
   {
     href: "https://www.x.com/Pentaai",
     icon: <FaXTwitter />,

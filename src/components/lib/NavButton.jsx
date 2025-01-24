@@ -36,6 +36,6 @@ export const NavButton = forwardRef(({
   );
 });
 
-Button.displayName = "Button";
+NavButton.displayName = "NavButton";
 
 export default NavButton;
