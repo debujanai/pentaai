@@ -399,4 +399,11 @@
     width: 100%;
     max-width: 300px;
   }
-} 
+}
+
+/* Hide empty card on mobile devices */
+@media screen and (max-width: 768px) {
+  .grid-component .card.card--empty {
+    display: none;
+  }
+}
