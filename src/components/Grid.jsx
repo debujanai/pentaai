@@ -81,7 +81,7 @@ const Grid = () => {
             <p>$PENTA Token Launch</p>
             <p>Community Growth</p>
             <p>Strateic Marketing</p>
-            <p>Agent Release</p>
+            <p>Aetheris Release</p>
           </div>
           <div className="card card--alt">
               <div className="card__img" style={{backgroundImage: "url(/img/51.png)"}}></div>
@@ -132,7 +132,7 @@ const Grid = () => {
         <div className="grid" data-effect="hover-3">
           <h2 className="grid__title">Quarter <br/>03</h2>
           <div className="quarter-description">
-            <p>Advanced Agent Releases</p>
+            <p>Nexor & Luminxex Release</p>
             <p>Ecosystem Growth</p>
             <p>Developer Partnerships</p>
             <p>Beta Platform Release</p>
@@ -186,7 +186,7 @@ const Grid = () => {
         <div className="grid" data-effect="hover-3">
           <h2 className="grid__title">Quarter <br/>04</h2>
           <div className="quarter-description">
-            <p>Final Release</p>
+            <p>Xypher & Virex Release</p>
             <p>Blockchain Collaborations</p>
             <p>Public Platform Release</p>
             <p>Credit System Implementation</p>
