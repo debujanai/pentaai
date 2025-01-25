@@ -41,7 +41,7 @@ const Tokenomics = () => {
             className="special-font !md:text-[6.2rem] w-full font-zentry !text-5xl !font-black !leading-[.9]"
           />
 
-          <div className="mt-8 grid grid-cols-2 gap-8 md:grid-cols-3">
+          <div className="mt-8 grid grid-cols-2 gap-8 md:grid-cols-5">
             <div className="text-center">
               <h3 className="text-2xl font-bold text-[#264653]">10M</h3>
               <p className="text-sm">Total Supply</p>
@@ -50,14 +50,8 @@ const Tokenomics = () => {
               <h3 className="text-2xl font-bold text-[#264653]">5%</h3>
               <p className="text-sm">Tax</p>
             </div>
-            <div className="text-center">
-              <h3 className="text-2xl font-bold text-[#264653]">40%</h3>
-              <p className="text-sm">Community Rewards</p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-2xl font-bold text-[#264653]">25%</h3>
-              <p className="text-sm">Liquidity Pool</p>
-            </div>
+          
+
             <div className="text-center">
               <h3 className="text-2xl font-bold text-[#264653]">20%</h3>
               <p className="text-sm">Development</p>
@@ -65,6 +59,10 @@ const Tokenomics = () => {
             <div className="text-center">
               <h3 className="text-2xl font-bold text-[#264653]">15%</h3>
               <p className="text-sm">Marketing</p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-[#264653]">15%</h3>
+              <p className="text-sm">Team Allocation</p>
             </div>
           </div>
 
