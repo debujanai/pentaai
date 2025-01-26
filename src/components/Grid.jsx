@@ -80,7 +80,7 @@ const Grid = () => {
           <div className="quarter-description">
             <p>$PENTA Token Launch</p>
             <p>Community Growth</p>
-            <p>Strateic Marketing</p>
+            <p>Strategic Marketing</p>
             <p>Aetheris Release</p>
           </div>
           <div className="card card--alt">
