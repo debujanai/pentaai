@@ -30,7 +30,7 @@ const Grid = () => {
             
           </div>
           <div className="card">
-              <div className="card__img" style={{backgroundImage: "url(/img/20459347.jpg)"}}></div>
+              <div className="card__img" style={{backgroundImage: "url(/img/20459347.webp)"}}></div>
               <div className="card__box card__box--c">
                   <span className="card__box-number">01</span>
                   <span className="card__box-tags">#core #foundation</span>
@@ -41,7 +41,7 @@ const Grid = () => {
           </div>
           <div className="card card--empty"></div>
           <div className="card card--alt">
-              <div className="card__img" style={{backgroundImage: "url(/img/nn.png)"}}></div>
+              <div className="card__img" style={{backgroundImage: "url(/img/nn.webp)"}}></div>
               <div className="card__box card__box--a">
                   <span className="card__box-number">02</span>
                   <span className="card__box-tags">#NLP #understanding</span>
@@ -62,7 +62,7 @@ const Grid = () => {
           </div>
           <div className="card card--empty"></div>
           <div className="card card--alt">
-              <div className="card__img" style={{backgroundImage: "url(/img/16.png)"}}></div>
+              <div className="card__img" style={{backgroundImage: "url(/img/16.webp)"}}></div>
               <div className="card__box card__box--b">
                   <span className="card__box-number">04</span>
                   <span className="card__box-tags">#deployment #launch</span>
@@ -84,7 +84,7 @@ const Grid = () => {
             <p>Aetheris Release</p>
           </div>
           <div className="card card--alt">
-              <div className="card__img" style={{backgroundImage: "url(/img/51.png)"}}></div>
+              <div className="card__img" style={{backgroundImage: "url(/img/51.webp)"}}></div>
               <div className="card__box card__box--a">
                   <span className="card__box-number">04</span>
                   <span className="card__box-tags">#learning #training</span>
@@ -94,7 +94,7 @@ const Grid = () => {
               </div>
           </div>
           <div className="card">
-              <div className="card__img" style={{backgroundImage: "url(/img/robo4.png)"}}></div>
+              <div className="card__img" style={{backgroundImage: "url(/img/robo4.webp)"}}></div>
               <div className="card__box card__box--a">
                   <span className="card__box-number">05</span>
                   <span className="card__box-tags">#token #launch</span>
@@ -105,7 +105,7 @@ const Grid = () => {
           </div>
           
           <div className="card card--alt">
-              <div className="card__img" style={{backgroundImage: "url(/img/9.png)"}}></div>
+              <div className="card__img" style={{backgroundImage: "url(/img/9.webp)"}}></div>
               <div className="card__box card__box--b">
                   <span className="card__box-number">06</span>
                   <span className="card__box-tags">#credit #system</span>
@@ -115,7 +115,7 @@ const Grid = () => {
               </div>
           </div>
           <div className="card card--alt">
-              <div className="card__img" style={{backgroundImage: "url(/img/1.png)"}}></div>
+              <div className="card__img" style={{backgroundImage: "url(/img/1.webp)"}}></div>
               <div className="card__box card__box--b">
                   <span className="card__box-number">16</span>
                   <span className="card__box-tags">#platform #public</span>
@@ -138,7 +138,7 @@ const Grid = () => {
             <p>Beta Platform Release</p>
           </div>
           <div className="card">
-              <div className="card__img" style={{backgroundImage: "url(/img/61.png)"}}></div>
+              <div className="card__img" style={{backgroundImage: "url(/img/61.webp)"}}></div>
               <div className="card__box card__box--c">
                   <span className="card__box-number">08</span>
                   <span className="card__box-tags">#agents #AI</span>
@@ -149,7 +149,7 @@ const Grid = () => {
           </div>
           
           <div className="card card--alt">
-              <div className="card__img" style={{backgroundImage: "url(/img/rr.png)"}}></div>
+              <div className="card__img" style={{backgroundImage: "url(/img/rr.webp)"}}></div>
               <div className="card__box card__box--a">
                   <span className="card__box-number">09</span>
                   <span className="card__box-tags">#crosschain #blockchain</span>
@@ -159,7 +159,7 @@ const Grid = () => {
               </div>
           </div>
           <div className="card">
-              <div className="card__img" style={{backgroundImage: "url(/img/aa.jpg)"}}></div>
+              <div className="card__img" style={{backgroundImage: "url(/img/aa.webp)"}}></div>
               <div className="card__box card__box--b">
                   <span className="card__box-number">17</span>
                   <span className="card__box-tags">#feedback #improvement</span>
@@ -170,7 +170,7 @@ const Grid = () => {
           </div>
           <div className="card card--empty"></div>
           <div className="card card--alt">
-              <div className="card__img" style={{backgroundImage: "url(/img/1373.jpg)"}}></div>
+              <div className="card__img" style={{backgroundImage: "url(/img/1373.webp)"}}></div>
               <div className="card__box card__box--b">
                   <span className="card__box-number">18</span>
                   <span className="card__box-tags">#tuning #performance</span>
@@ -192,7 +192,7 @@ const Grid = () => {
             <p>Credit System Implementation</p>
           </div>
           <div className="card">
-              <div className="card__img" style={{backgroundImage: "url(/img/17.png)"}}></div>
+              <div className="card__img" style={{backgroundImage: "url(/img/17.webp)"}}></div>
               <div className="card__box card__box--c">
                   <span className="card__box-number">12</span>
                   <span className="card__box-tags">#final #release</span>
@@ -204,7 +204,7 @@ const Grid = () => {
           <div className="card card--empty"></div>
           
           <div className="card card--alt">
-              <div className="card__img" style={{backgroundImage: "url(/img/31.jpg)"}}></div>
+              <div className="card__img" style={{backgroundImage: "url(/img/31.webp)"}}></div>
               <div className="card__box card__box--a">
                   <span className="card__box-number">13</span>
                   <span className="card__box-tags">#scaling #operations</span>
@@ -215,7 +215,7 @@ const Grid = () => {
           </div>
           <div className="card card--empty"></div>
           <div className="card">
-              <div className="card__img" style={{backgroundImage: "url(/img/41.png)"}}></div>
+              <div className="card__img" style={{backgroundImage: "url(/img/41.webp)"}}></div>
               <div className="card__box card__box--b">
                   <span className="card__box-number">14</span>
                   <span className="card__box-tags">#multichain #deployment</span>
@@ -225,7 +225,7 @@ const Grid = () => {
               </div>
           </div>
           <div className="card card--alt">
-              <div className="card__img" style={{backgroundImage: "url(/img/42.png)"}}></div>
+              <div className="card__img" style={{backgroundImage: "url(/img/42.webp)"}}></div>
               <div className="card__box card__box--b">
                   <span className="card__box-number">15</span>
                   <span className="card__box-tags">#global #scalability</span>

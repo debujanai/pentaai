@@ -111,7 +111,7 @@ const Features = () => (
 
       <BentoTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
         <BentoCard
-          src="img/robo9.png"
+          src="img/robo9.webp"
           title={<>Luminex</>}
           description="Simplify crypto trading with real-time analysis of high-performing wallets, automated copy trading, and advanced risk assessment tools."
           isComingSoon
@@ -121,7 +121,7 @@ const Features = () => (
       <div className="grid h-[95vh] md:h-[135vh] w-full grid-cols-2 grid-rows-3 gap-7">
         <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
           <BentoCard
-            src="img/r2.png"
+            src="img/r2.webp"
             title={<>Virex</>}
             description="Automate smart contract deployment with security audits, gas optimization, and multi-chain support."
             isComingSoon
@@ -130,7 +130,7 @@ const Features = () => (
 
         <BentoTilt className="bento-tilt_1 row-span-1 ms-32 md:col-span-1 md:ms-0">
           <BentoCard
-            src="img/p.png"
+            src="img/p.webp"
             title={<>Xypher</>}
             description="Create and customize AI models for specific tasks, bridging AI and blockchain with pre-trained models and optimization tools."
             isComingSoon
@@ -139,7 +139,7 @@ const Features = () => (
 
         <BentoTilt className="bento-tilt_1 me-14 md:col-span-1 md:me-0">
           <BentoCard
-            src="img/robo2.png"
+            src="img/robo2.webp"
             title={<>Nexor</>}
             description="Streamline NFT creation with AI-powered tools for unique collections, rarity optimization, and metadata management."
             isComingSoon
@@ -147,7 +147,7 @@ const Features = () => (
         </BentoTilt>
         <BentoTilt className="bento-tilt_1 row-span-4 ms-32 md:col-span-2 md:ms-0">
           <BentoCard
-            src="img/r1.png"
+            src="img/r1.webp"
             title={<>Aetheris</>}
             description="Ensure smart contract security with automated audits, actionable recommendations, and compliance checks for enhanced trust and reliability."
             isComingSoon

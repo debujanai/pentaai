@@ -38,7 +38,7 @@ const PixelEffect = () => {
 
     // Load image
     const image = new Image();
-    image.src = '/img/futuristic-robot-interacting-with-money.png'; // Replace with your image path
+    image.src = '/img/futuristic-robot-interacting-with-money.webp'; // Replace with your image path
     
     image.onload = () => {
       setImg(image);
@@ -239,7 +239,7 @@ const PixelEffect = () => {
             </CardItem>
             <CardItem translateZ="100" className="w-full mt-4 md:mt-8">
               <img
-                src="img/revenue.png"
+                src="img/revenue.webp"
                  height="1000"
                 width="1000"
                 className="h-40 md:h-64 w-full object-cover rounded-xl group-hover/card:shadow-xl"

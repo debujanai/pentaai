@@ -329,7 +329,7 @@ const Navbar = () => {
           className="relative flex size-full items-center justify-between p-4"
         >
           <div className="flex items-center gap-7">
-            <img src="/img/logo.png" alt="logo" className="w-10" />
+            <img src="/img/logo.webp" alt="logo" className="w-10" />
 
             <Button
               id="product-button"
@@ -390,7 +390,7 @@ const Navbar = () => {
           >
             {/* Top section with logo and DAPP button */}
             <div className="absolute top-4 left-8 flex items-center gap-6">
-              <img src="/img/logo.png" alt="logo" className="w-10" />
+              <img src="/img/logo.webp" alt="logo" className="w-10" />
               <Button
                 id="product-button"
                 rightIcon={<TiLocationArrow className="rotate-[135deg]" />}

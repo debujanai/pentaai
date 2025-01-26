@@ -101,7 +101,7 @@ const Hero = ({ startAnimation }) => {
 
       <img 
         ref={robotRef}
-        src="/test.png"
+        src="/test.webp"
         alt="AI Robot"
         className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[950px] h-auto 
         top-[35vh] md:top-[0vh]"
