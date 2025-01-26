@@ -1,9 +1,7 @@
-const Button = ({ title, id, rightIcon, leftIcon, containerClass }) => {
+const Button = ({ title, id, rightIcon, leftIcon, containerClass, onClick }) => {
   return (
     <a
-      href="https://www.pentaai.io"
-      target="_blank"
-      rel="noopener noreferrer"
+      onClick={onClick}
       id={id}
       className={`group relative z-10 w-fit cursor-pointer overflow-hidden rounded-full bg-[#264653] px-7 py-3 text-black ${containerClass}`}
     >

@@ -338,6 +338,14 @@ const Navbar = () => {
             >
               DAPP
             </Button>
+            <Button
+              id="product-button"
+              rightIcon={<TiLocationArrow className="rotate-[135deg]" />}
+              className="bg-[#264653] px-4 py-2"
+              onClick={() => window.open('https://pentaai.gitbook.io/pentaai', '_blank', 'noopener,noreferrer')}
+            >
+              Whitepaper
+            </Button>
           </div>
           <div
             ref={navLinkBackgroundRef}
@@ -397,6 +405,14 @@ const Navbar = () => {
                 className="bg-black px-4 py-2"
               >
                 DAPP
+              </Button>
+              <Button
+                id="product-button"
+                rightIcon={<TiLocationArrow className="rotate-[135deg]" />}
+                className="bg-black px-4 py-2"
+                onClick={() => window.open('https://pentaai.gitbook.io/pentaai', '_blank', 'noopener,noreferrer')}
+              >
+                Whitepaper
               </Button>
             </div>
 

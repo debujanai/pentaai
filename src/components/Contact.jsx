@@ -69,6 +69,7 @@ const Tokenomics = () => {
           <Button
             title="view whitepaper"
             containerClass="mt-10 cursor-pointer mt-5 text-white bg-[#264653] hover:text-[#264653] hover:bg-white transition-all duration-300 ease-in-out"
+            onClick={() => window.open('https://pentaai.gitbook.io/pentaai', '_blank', 'noopener,noreferrer')}
           />
         </div>
       </div>
